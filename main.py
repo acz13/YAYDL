@@ -61,7 +61,7 @@ def stream_command():
 
     vformat = VIDEO_FORMAT.format(res=res)
     command = ['mpv', "--ytdl-format=''{}''".format(vformat), quote(url.get())]
-    print(command)
+    logging.debug(command)
     run(command)
 
 logging.debug(os.getcwd())
